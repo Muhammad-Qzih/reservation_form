@@ -15,57 +15,83 @@
 </head>
 
 <body>
+
   <section class="resevation-section">
-    <div class="container">
-      <div class="form-container">
-        <h1>Travel resevation form</h1>
-        <form action="">
-          <label for="full-name">Full Name*</label>
-          <input type="text" id="full-name" placeholder="First Name Last Name" required>
 
-          <label for="email">Eamil*</label>
-          <input type="email" id="email" placeholder="email@example.com" required>
+    <div class="form-container">
+      <h1>Travel resevation form</h1>
+      <form action="">
+        <label for="full-name">Full Name*</label>
+        <input type="text" id="full-name" placeholder="First Name Last Name" required>
 
-          <label for="tour-package">Select Tour Package*</label>
-          <select id="tour-package" required>
-            <option value="">Select Package</option>
-            <option value="goa">Goa</option>
-            <option value="goa2">Goa2</option>
-            <option value="goa3">Goa3</option>
-          </select>
+        <label for="email">Eamil*</label>
+        <input type="email" id="email" placeholder="email@example.com" required>
 
-          <label for="arrival-date">Arrival Date*</label>
-          <input type="date" id="arrival-date" required>
+        <label for="tour-package">Select Tour Package*</label>
+        <select id="tour-package" required>
+          <option value="">Select Package</option>
+          <option value="goa">Goa</option>
+          <option value="goa2">Goa2</option>
+          <option value="goa3">Goa3</option>
+        </select>
 
-          <label for="number-of-persons">Number of Persons*</label>
-          <input type="number" id="number-of-persons" min="1" required>
+        <label for="arrival-date">Arrival Date*</label>
+        <input type="date" id="arrival-date" required>
 
-          <fieldset>
-            <legend>What would you want to avail?*</legend>
-            <label><input type="checkbox" name="services" value="boarding"> Boarding</label>
-            <label><input type="checkbox" name="services" value="fooding"> Fooding</label>
-            <label><input type="checkbox" name="services" value="sightseeing"> Sightseeing</label>
-          </fieldset>
+        <label for="number-of-persons">Number of Persons*</label>
+        <input type="number" id="number-of-persons" min="1" required>
+
+        <fieldset>
+          <legend>What would you want to avail?*</legend>
+          <label><input type="checkbox" name="services" value="boarding"> Boarding</label>
+          <label><input type="checkbox" name="services" value="fooding"> Fooding</label>
+          <label><input type="checkbox" name="services" value="sightseeing"> Sightseeing</label>
+        </fieldset>
 
 
-          <label for="coupon-code">Discount Coupon Code</label>
-          <input type="text" id="coupon-code" placeholder="Enter code">
+        <label for="coupon-code">Discount Coupon Code</label>
+        <input type="text" id="coupon-code" placeholder="Enter code">
 
-          <fieldset>
-            <legend>Terms and Conditions*</legend>
-            <label><input type="radio" name="terms" value="agree" required> I agree</label>
-            <label><input type="radio" name="terms" value="disagree" required> I disagree</label>
-          </fieldset>
+        <fieldset>
+          <legend>Terms and Conditions*</legend>
+          <label><input type="radio" name="terms" value="agree" required> I agree</label>
+          <label><input type="radio" name="terms" value="disagree" required> I disagree</label>
+        </fieldset>
 
-          <button type="submit">Complete Reservation</button>
-        </form>
+        <button type="submit">Complete Reservation</button>
+      </form>
 
-        <div class="image">
-          <h3></h3>
-          <img src="" alt="">
-        </div>
+    </div>
 
+    <div class="text">
+      <div class="item">
+        <i class="far fa-gem fa-3x icon"></i>
+        <p class="text-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate hic et repellat,
+          cupiditate
+          facilis maxime itaque aliquid consequatur temporibus? Praesentium, quos autem. Sapiente molestiae cum id. Ad
+          laudantium sit culpa.
+        </p>
       </div>
+
+      <div class="item">
+        <i class="fas fa-globe-asia fa-3x icon"></i>
+        <p class="text-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate hic et repellat,
+          cupiditate
+          facilis maxime itaque aliquid consequatur temporibus? Praesentium, quos autem. Sapiente molestiae cum id. Ad
+          laudantium sit culpa.
+
+        </p>
+      </div>
+
+      <div class="item">
+        <i class="fas fa-magic fa-3x icon"></i>
+        <p class="text-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate hic et repellat,
+          cupiditate
+          facilis maxime itaque aliquid consequatur temporibus? Praesentium, quos autem. Sapiente molestiae cum id. Ad
+          laudantium sit culpa.
+        </p>
+      </div>
+
     </div>
 
   </section>

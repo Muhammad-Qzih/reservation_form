@@ -4,6 +4,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 :root {
   --main-color: #2196f3;
   --main-color-alt: #1787e0;
@@ -12,8 +13,18 @@
 
 body {
   font-family: "Cairo", "sans-serif";
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -27,30 +38,86 @@ ul {
 a {
   text-decoration: none;
 }
-
-.container {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*Small*/
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-/*Medium*/
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-/*Large*/
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
 /* End global rules  */
+
+.resevation-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  gap: 0;
+  width: 80%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-color: white;
+}
+
+/* Start Form Container */
+.form-container {
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #d5d2d2;
+  border-radius: 5px;
+}
+
+.form-container label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.form-container input[type="checkbox"],
+.form-container input[type="radio"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+.form-container fieldset {
+  border: none;
+  margin-bottom: 10px;
+}
+
+.form-container legend {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.form-container button:hover {
+  background-color: var(--main-color-alt);
+}
+/* End Form Container */
+
+/* Media Queries*/
+@media (max-width: 1191px) {
+  .resevation-section {
+    grid-template-columns: 1fr;
+    height: calc(100vh - 200px);
+  }
+
+  .resevation-section .form-container .h1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-container {
+    order: 1;
+    width: 100%;
+    padding: 20px;
+  }
+}
+/* Media Queries*/
