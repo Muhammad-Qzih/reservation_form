@@ -5,9 +5,8 @@
   box-sizing: border-box;
 }
 :root {
-  /* --primary-color: 
-  --primary-color-alt:  */
-
+  --main-color: #2196f3;
+  --main-color-alt: #1787e0;
   --main-transition-duration: 0.3s;
 }
 
@@ -55,7 +54,3 @@ a {
   }
 }
 /* End global rules  */
-
-.container {
-  background-color: red;
-}
