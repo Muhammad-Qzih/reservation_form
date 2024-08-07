@@ -8,26 +8,16 @@
 :root {
   --main-color: #2196f3;
   --main-color-alt: #1787e0;
-  --main-transition-duration: 0.3s;
+  --main-trasition-duration: 0.3s;
+  --spacing-small: 10px;
+  --font-size-small: 10px;
+  --spacing-medium: 20px;
+  --font-size-medium: 20px;
 }
 
 body {
   font-family: "Cairo", "sans-serif";
   background-color: #f4f4f4;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
 }
 
 .container {
@@ -58,19 +48,29 @@ a {
 
 /* End global rules  */
 
-.resevation .container .resevation-section {
+.reservation-section {
   margin-top: 200px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
   gap: 0;
   width: 80%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 var(--spacing-small) rgba(0, 0, 0, 0.1);
   position: relative;
   background-color: white;
   margin-bottom: 100px;
   min-width: 100%;
 }
 
+.reservation-section::after {
+  content: "";
+  background-color: var(--main-color-alt);
+  width: 200px;
+  height: calc(100% + 100px);
+  top: -50px;
+  position: absolute;
+  right: -34px;
+  z-index: -1;
+}
 /* Start Form Container */
 .form-container h1 {
   color: var(--main-color);
@@ -83,42 +83,42 @@ a {
 .form-container input,
 .form-container select {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: var(--spacing-small);
+  margin-bottom: var(--spacing-small);
   border: 1px solid #d5d2d2;
   border-radius: 5px;
 }
 
 .form-container label {
   display: block;
-  margin: 10px 0 5px;
+  margin: var(--spacing-small) 0 5px;
 }
 
 .form-container input[type="checkbox"],
 .form-container input[type="radio"] {
   width: auto;
-  margin-right: 10px;
+  margin-right: var(--spacing-small);
 }
 
 .form-container fieldset {
   border: none;
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-small);
 }
 
 .form-container legend {
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-small);
   font-weight: bold;
 }
 
 .form-container button {
   width: 100%;
-  padding: 10px;
+  padding: var(--spacing-small);
   border: none;
   background-color: var(--main-color);
   color: white;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: var(--font-size-medium);
 }
 
 .form-container button:hover {
@@ -152,11 +152,11 @@ a {
 }
 
 .item {
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-medium);
   overflow: hidden;
   display: flex;
   justify-content: space-evenly;
-  padding: 20px;
+  padding: var(--spacing-medium);
   align-items: center;
 }
 
@@ -167,11 +167,24 @@ a {
 
 .text-item {
   position: relative;
+  background: linear-gradient(
+    135degm rgba(255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  padding: var(--spacing-medium);
+  margin-left: 50px;
+  transition: var(--main-trasition-duration);
+  line-height: 1.2;
+}
+
+.text-item:hover {
   color: black;
   background-color: #eee;
-
-  padding: 20px;
-  margin-left: 50px;
+  transform: scale(1.1);
 }
 
 .text-item::after {
@@ -192,7 +205,7 @@ a {
   left: -44px;
   top: 50%;
   margin-top: -20px;
-  border-width: 20px;
+  border-width: var(--spacing-medium);
   border-style: solid;
   border-color: transparent var(--main-color) transparent transparent;
 }
@@ -201,28 +214,32 @@ a {
 
 /* Media Queries*/
 @media (max-width: 992px) {
-  .resevation .container .resevation-section {
+  .reservation .container .reservation-section {
     grid-template-columns: 1fr;
   }
-  .resevation .container .resevation-section .textr {
-    display: none;
-  }
-}
 
-@media (max-width: 992px) {
+  .heading-1 {
+    font-size: calc(var(--font-size-medium) + 5px);
+    text-align: center;
+  }
+
   .item {
     flex-direction: column;
   }
+
   .item .text-item {
     min-width: 100%;
     text-align: center;
+    margin: var(--spacing-small) 0;
   }
-  
+
   .item .icon {
     color: var(--main-color);
   }
+
   .item .text-item::before,
-  .item .text-item::after {
+  .item .text-item::after,
+  .reservation .container .reservation-section::after {
     content: none;
   }
 }
