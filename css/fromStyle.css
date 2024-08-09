@@ -87,6 +87,7 @@ body {
   margin-bottom: var(--spacing-small);
   border: 1px solid #d5d2d2;
   border-radius: 5px;
+  outline: none;
 }
 
 .form-container label {
@@ -103,10 +104,10 @@ body {
 .form-container fieldset {
   border: none;
   margin-bottom: var(--spacing-small);
+  margin-top: var(--spacing-medium);
 }
 
 .form-container legend {
-  margin-bottom: var(--spacing-small);
   font-weight: bold;
 }
 
